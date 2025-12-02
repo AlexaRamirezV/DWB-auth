@@ -1,0 +1,14 @@
+# Config Service:
+spring:
+ application:
+   name: auth-service
+ profiles:
+   active: dev
+ config:
+   import: "optional:configserver:"   # qué importar
+ cloud:
+   config:
+     uri: http://localhost:8888       # dónde está el config server
+
+# Los otros microservicios están en config-data
+#port=8081
